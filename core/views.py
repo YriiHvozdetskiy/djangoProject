@@ -9,7 +9,8 @@ views - це контролер/представленя/інтерфейс в �
 
 
 def index(request):
-    return render(request, 'main/index.html', context)
+    # return render(request, 'main/index.html', context)
+    return HttpResponse('Home page')
 
 
 def about(request):
