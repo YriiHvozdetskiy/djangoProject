@@ -9,7 +9,12 @@ views - це контролер/представленя/інтерфейс в �
 
 
 def index(request):
-    return render(request, 'main/index.html', context)
+    # контекст потрапляє в templates
+    context = {
+        'title': 'Home - Главная',
+        'content': "Магазин мебели HOME",
+    }
+    return render(request, 'core/index.html', context)
 
 
 def about(request):
