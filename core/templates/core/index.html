@@ -1,11 +1,14 @@
 {% load static %}
+{% load compress %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="{% static 'deps/css/main.css' %}">
-   <link rel="stylesheet" href="{% static 'deps/css/test.scss' %}">
+   {% compress css %}
+      <link rel="stylesheet" href="{% static 'deps/scss/main.scss' %}">
+   {% endcompress %}
    <title>{{ title }}</title>
 </head>
 <body>
