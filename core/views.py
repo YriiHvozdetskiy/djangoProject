@@ -10,9 +10,14 @@ views - це контролер/представленя/інтерфейс в �
 
 def index(request):
     # контекст потрапляє в templates
+    # context - зараз як база даних
     context = {
         'title': 'Home - Главная',
         'content': "Магазин мебели HOME",
+        'list': ['list'],
+        'dict': {'first': 1},
+        'is_auth': True,
+        'user_name': 'Kote'
     }
     return render(request, 'core/index.html', context)
 

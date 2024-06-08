@@ -2,9 +2,16 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>index</title>
+   <title>{{ title }}</title>
 </head>
 <body>
-
+<p>{{ content }}</p>
+<span>{{ list.0 }}</span>
+<br>
+<span>{{ dict.first }}</span>
+{% if is_auth %}
+   <br>
+	{{ user_name }}
+{% endif %} 
 </body>
 </html>
