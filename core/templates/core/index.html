@@ -1,3 +1,6 @@
+{#розширюєм base.html #}
+{% extends "base.html" %}
+{#load static - не наслідується, потрібно в кожному файлі #}
 {% load static %}
 {% load compress %}
 
@@ -12,6 +15,9 @@
    <title>{{ title }}</title>
 </head>
 <body>
+
+{#==== content =====#}
+{% block content %}
 <p>{{ content }}</p>
 <span>{{ list.0 }}</span>
 <br>
@@ -21,5 +27,8 @@
    {{ user_name }}
 {% endif %}
 <img class="mx-1" src="{% static "deps/images/baseavatar.jpg" %}" alt="Catalog Icon">
+{% endblock %}
+{#==== end content =====#}
+
 </body>
 </html>

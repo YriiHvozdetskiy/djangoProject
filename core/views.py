@@ -3,9 +3,10 @@ from django.shortcuts import render
 
 """
 views - це контролер/представленя/інтерфейс в патерні MVC
-звязує частину яку ми бачимо з models
+звязує частину яку ми бачимо з models(база даних)
 - виконують прийом запитів від користувача і передачу відповіді користувачу
 """
+
 
 def index(request):
     # контекст потрапляє в templates
@@ -22,4 +23,11 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse('About page')
+    # пишем саме так: text_on_page
+    context = {
+        'title': 'Home - О нас',
+        'content': "О нас",
+        'text_on_page': "Текст о том почему этот магазин такой классный, и какой хороший товар."
+    }
+
+    return render(request, 'core/about.html', context)

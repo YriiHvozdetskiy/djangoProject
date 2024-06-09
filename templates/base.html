@@ -1,0 +1,27 @@
+{# {% extends "base.html" %} - це розширює цей файл (прописано в файлі: index.html, about.html)#}
+{# тому можемо використовувати {% block content %}{% endblock %} з файлів: index.html, about.html#}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+</head>
+<body>
+
+<header>
+   <a href="{% url "index" %}">Home</a>
+   <br>
+   <a href="{% url "about" %}">about</a>
+</header>
+
+{# в файлі base.html відображається те що обгорнуто в {% block content %}{% endblock %} в файлі: index.html, about.html #}
+{# якщо там є розширеня {% extends "base.html" %}#}
+{% block content %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+</body>
+</html>
