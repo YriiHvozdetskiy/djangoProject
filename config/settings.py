@@ -25,6 +25,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',  # шукає і обслуговує статичні файли
     'core.apps.CoreConfig',
     'compressor',
+
+    # Якщо у вас є файл goods/apps.py з класом конфігурації, додайте його так:
+    'goods.apps.GoodsConfig',
+    # 'goods'
 ]
 
 MIDDLEWARE = [

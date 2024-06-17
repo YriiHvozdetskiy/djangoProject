@@ -18,5 +18,6 @@ namespace - записуєм до якого приложенія віднося
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('core.urls', namespace='core'))
+    path('', include('core.urls', namespace='core')),
+    path('goods/', include('goods.urls')),
 ]
