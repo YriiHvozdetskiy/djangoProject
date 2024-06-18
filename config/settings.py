@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     # Якщо у вас є файл goods/apps.py з класом конфігурації, додайте його так:
     'goods.apps.GoodsConfig',
     # 'goods'
+
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
